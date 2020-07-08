@@ -1,0 +1,25 @@
+start locator --name=siteA-locator --port=10331 --locators=localhost[10331] --mcast-port=0 --log-level=config \
+        --J=-Dgemfire.remote-locators=localhost[10332] --J=-Dgemfire.distributed-system-id=1 \
+        --J=-Dgemfire.jmx-manager-start=true --J=-Dgemfire.jmx-manager-http-port=8081 \
+        --J=-Dgemfire.jmx-manager-port=1091
+
+start server --name=siteA-server1 --locators=localhost[10331] --mcast-port=0 --log-level=config \
+        --enable-time-statistics=true --statistic-archive-file=cacheserver.gfs --server-port=0 \
+        --J=-Dgemfire.statistic-sampling-enabled=true \
+        --J=-Dgemfire.distributed-system-id=1 --J=-Dgemfire.conserve-sockets=false \
+        --J=-Dgemfire.log-file=cacheserver.log
+
+start server --name=siteA-server2 --locators=localhost[10331] --mcast-port=0 --log-level=config \
+        --enable-time-statistics=true --statistic-archive-file=cacheserver.gfs --server-port=0 \
+        --J=-Dgemfire.statistic-sampling-enabled=true \
+        --J=-Dgemfire.distributed-system-id=1 --J=-Dgemfire.conserve-sockets=false \
+        --J=-Dgemfire.log-file=cacheserver.log
+
+create gateway-receiver
+
+create gateway-sender --id="A-to-B" --parallel="true" --remote-distributed-system-id="2"
+
+list members
+
+disconnect
+

@@ -1,0 +1,12 @@
+connect --locator=localhost[10331]
+
+# Create the region that will share data with the London site
+create region --name=test-region --type=PARTITION_REDUNDANT --gateway-sender-id="A-to-B"
+
+disconnect
+
+connect --locator=localhost[10332]
+
+create region --name=test-region --type=PARTITION_REDUNDANT --gateway-sender-id="B-to-A"
+
+disconnect
