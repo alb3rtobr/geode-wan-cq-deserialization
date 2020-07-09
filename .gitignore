@@ -4,3 +4,5 @@ siteA-server2
 siteB-locator
 siteB-server1
 siteB-server2
+cpp/Client1/build/*
+cpp/Client2/build/*
