@@ -27,3 +27,13 @@ Start Client2 first. When Client1 is executed, the serialization exception can b
 ```
 $ ./stop.sh
 ```
+
+
+### Compile and run Java clients
+Clients to verify the issue does not appear in Java.
+Just change X by A or B:
+```
+$ cd java
+$ ./runClientX.sh
+```
+
