@@ -1,6 +1,6 @@
 
 
-Setup cluster (2 sites, 1 locator + 1 server per site, gw senders and receivers, /test-region):
+Setup cluster (2 sites, 1 locator + 1 server per site, gw senders and receivers, /multisiteData region):
 ```
 $ ./start.sh
 ```
@@ -18,3 +18,5 @@ $ cd build
 $ cmake ..
 $ cmake --build .
 ```
+
+Start Client2 first. When Client1 is executed, the serialization exception can be seen on logs.
