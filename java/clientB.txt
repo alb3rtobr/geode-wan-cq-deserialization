@@ -1,0 +1,46 @@
+alb3rtobr - ClientCache create
+[clientB] Started and ready for events.
+-----------------------------------------------------------------------------------------------
+alb3rtobr - Deserializing GatewaySenderEventCallbackArgument
+java.lang.Thread.getStackTrace(Thread.java:1559)
+org.apache.geode.internal.cache.wan.GatewaySenderEventCallbackArgument.fromData(GatewaySenderEventCallbackArgument.java:218)
+org.apache.geode.internal.serialization.internal.DSFIDSerializerImpl.invokeFromData(DSFIDSerializerImpl.java:317)
+org.apache.geode.internal.serialization.internal.DSFIDSerializerImpl.create(DSFIDSerializerImpl.java:368)
+org.apache.geode.internal.DSFIDFactory.create(DSFIDFactory.java:1026)
+org.apache.geode.internal.InternalDataSerializer.basicReadObject(InternalDataSerializer.java:2513)
+org.apache.geode.DataSerializer.readObject(DataSerializer.java:2864)
+org.apache.geode.internal.util.BlobHelper.deserializeBlob(BlobHelper.java:99)
+org.apache.geode.internal.cache.tier.sockets.CacheServerHelper.deserialize(CacheServerHelper.java:73)
+org.apache.geode.internal.cache.tier.sockets.Part.getObject(Part.java:354)
+org.apache.geode.internal.cache.tier.sockets.Part.getObject(Part.java:362)
+org.apache.geode.internal.cache.tier.sockets.CacheClientUpdater.handleUpdate(CacheClientUpdater.java:641)
+org.apache.geode.internal.cache.tier.sockets.CacheClientUpdater.processMessages(CacheClientUpdater.java:1648)
+org.apache.geode.internal.cache.tier.sockets.CacheClientUpdater.run(CacheClientUpdater.java:483)
+-----------------------------------------------------------------------------------------------
+[clientB] Received create for 44:value44
+[clientB] Putting <Integer,String>.
+[clientB] Received create for 87:value87
+-----------------------------------------------------------------------------------------------
+alb3rtobr - Deserializing GatewaySenderEventCallbackArgument
+java.lang.Thread.getStackTrace(Thread.java:1559)
+org.apache.geode.internal.cache.wan.GatewaySenderEventCallbackArgument.fromData(GatewaySenderEventCallbackArgument.java:218)
+org.apache.geode.internal.serialization.internal.DSFIDSerializerImpl.invokeFromData(DSFIDSerializerImpl.java:317)
+org.apache.geode.internal.serialization.internal.DSFIDSerializerImpl.create(DSFIDSerializerImpl.java:368)
+org.apache.geode.internal.DSFIDFactory.create(DSFIDFactory.java:1026)
+org.apache.geode.internal.InternalDataSerializer.basicReadObject(InternalDataSerializer.java:2513)
+org.apache.geode.DataSerializer.readObject(DataSerializer.java:2864)
+org.apache.geode.internal.util.BlobHelper.deserializeBlob(BlobHelper.java:99)
+org.apache.geode.internal.cache.tier.sockets.CacheServerHelper.deserialize(CacheServerHelper.java:73)
+org.apache.geode.internal.cache.tier.sockets.Part.getObject(Part.java:354)
+org.apache.geode.internal.cache.tier.sockets.Part.getObject(Part.java:362)
+org.apache.geode.internal.cache.tier.sockets.CacheClientUpdater.handleUpdate(CacheClientUpdater.java:641)
+org.apache.geode.internal.cache.tier.sockets.CacheClientUpdater.processMessages(CacheClientUpdater.java:1648)
+org.apache.geode.internal.cache.tier.sockets.CacheClientUpdater.run(CacheClientUpdater.java:483)
+-----------------------------------------------------------------------------------------------
+[clientB] Received create for 83:PDX[25530732,ExamplePdxSerializable]{id=83}
+[clientB] PdxInstance object type, status= Ongoing
+[clientB] Converted to DomainClass object type, type= PdxObject
+[clientB] Putting <Integer,PdxSerializable>.
+[clientB] Received create for 71:ExamplePdxSerializable@34c01041
+[clientB] DomainClass object type, status= Ongoing
+[clientB] Waiting before close...
